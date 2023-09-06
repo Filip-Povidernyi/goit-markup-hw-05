@@ -287,6 +287,8 @@ img {
     background-color: var(--ocean);
 }
 
+/* Modal window */
+
 .backdrop {
     background: var(--navyblue-modal);
     position: fixed;
@@ -359,6 +361,14 @@ img {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+}
+
+.modal-paragraph {
+    color: var(--navyblue);
+    text-align: center;
+    font-weight: 500;
+
+    padding: 72px 24px 16px 24px;
 }
 
 /* Future Studio Section (2)*/
@@ -641,7 +651,7 @@ img {
     color: var(--cloud)
 }
 
-.basement-text-icons {
+.basement-text-par {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -686,4 +696,45 @@ img {
 
 .sotial-icon {
     fill: var(--cloud)
+}
+
+.container-base-sotial {
+    padding-right: 80px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-btn {
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 165px;
+    height: 40px;
+}
+
+.email-fild {
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.48px;
+
+    background-color: transparent;
+    width: 264px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid var(--white);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.subscribe-icon {
+    fill: var(--white);
 }
