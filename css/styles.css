@@ -309,6 +309,7 @@ img {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 408px;
+    padding: 24px;
     min-height: 584px;
     border-radius: 4px;
     background-color: var(--dairy);
@@ -363,13 +364,88 @@ img {
     visibility: hidden;
 }
 
+
+/* MODAL FORM STYLES */
+
 .modal-paragraph {
     color: var(--navyblue);
     text-align: center;
     font-weight: 500;
-
-    padding: 72px 24px 16px 24px;
+    padding-top: 48px;
+    padding-bottom: 16px;
 }
+
+.modal-label {
+    color: var(--lightslate);
+    font-size: 12px;
+    letter-spacing: 0.03em;
+
+    display: block;
+    margin-bottom: 4px;
+}
+
+.modal-field {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 38px;
+
+    border-radius: 4px;
+    border: 1px solid var(--navyblue-modal);
+}
+
+.modal-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(16px, -50%) ;
+    fill: var(--navyblue)
+}
+
+.modal-comment {
+    width: 100%;
+    height: 120px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--navyblue-modal);
+    resize: none;
+}
+
+.check-box-icon:hover {
+    fill: var(--iris);
+}
+
+.check-agree {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.check-agree-descr {
+    color: var(--lightslate);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+}
+
+.check-agree-link {
+    color: var(--iris);
+    line-height: 1.33;
+}
+
+.send-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 /* Future Studio Section (2)*/
 .futures-list {
@@ -640,6 +716,7 @@ img {
 .basement-cont {
     display: flex;
     align-items: baseline;
+
 }
 
 .basement-text {
@@ -699,7 +776,13 @@ img {
 }
 
 .container-base-sotial {
-    padding-right: 80px;
+    margin-right: 80px; 
+}
+
+.subscibe-base {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .subscribe-form {
@@ -725,6 +808,7 @@ img {
     font-weight: 400;
     line-height: 2;
     letter-spacing: 0.48px;
+    padding: 8px 16px;
 
     background-color: transparent;
     width: 264px;
@@ -733,6 +817,16 @@ img {
     border-radius: 4px;
     border: 1px solid var(--white);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.email-fild::placeholder {
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.03em;
 }
 
 .subscribe-icon {
