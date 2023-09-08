@@ -392,10 +392,6 @@ img {
     margin-bottom: 8px;
 }
 
-.label-field-comm {
-    margin-bottom: 16px;
-}
-
 .modal-input {
     width: 100%;
     height: 40px;
@@ -409,22 +405,26 @@ img {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-input:focus {
+    border-color: var(--iris);
+}
+
 .modal-input-icon {
     position: absolute;
     top: 50%;
     left: 16px;
-    transform: translateY(-50%) ;
+    transform: translateY(-50%);
     fill: var(--navyblue);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
 }
 
-.modal-input:focus {
-    border-color: var(--iris);
-}
-
 .modal-input:focus + .modal-input-icon {
     fill: var(--iris);
+}
+
+.label-field-comm {
+    margin-bottom: 16px;
 }
 
 .modal-comment {
@@ -444,9 +444,9 @@ img {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.modal-comment::placeholder {
+/* .modal-comment::placeholder {
     color: var(--navyblue-modal);
-}
+} */
 
 .modal-comment:focus {
     border-color: var(--iris);
@@ -454,6 +454,16 @@ img {
 
 .check-agreement {
     margin-bottom: 24px;
+}
+
+.check-agree {
+    display: block;
+    color: var(--lightslate);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
 .modal-check {
@@ -472,34 +482,19 @@ img {
                 fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.check-box-icon {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-input[type="checkbox"]:checked ~ .check-agree > .modal-check {
+input[type="checkbox"]:checked + .check-agree > .modal-check {
     background-color: var(--iris);
     border: none;
     fill: var(--cloud);
 }
 
-input[type="checkbox"]:focus-visible ~ .modal-check {
+/* input[type="checkbox"]:focus-visible ~ .modal-check {
     outline: 2px solid var(--ocean);
     outline-offset: 1px;
-}
-
-.check-agree {
-    display: block;
-    color: var(--lightslate);
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-}
+} */
 
 .check-agree-link {
     color: var(--iris);
-    line-height: 1.33;
 }
 
 .send-btn {
