@@ -419,7 +419,7 @@
         <div class="subscibe-base">
           <p class="basement-text-par">Subscribe</p>
           <form class="subscribe-form" autocomplete="on">
-            <label>
+            <label class="base-label">
               <input
                 class="email-fild"
                 type="email"
@@ -450,20 +450,24 @@
           Leave your contacts and we will call you back
         </p>
         <form class="modal-form" name="reviews-form">
-          <label for="user-name" class="modal-label"> Name</label>
-          <div class="modal-field">
-            <input
-              class="modal-input"
-              type="text"
-              name="user-name"
-              id="user-name"
-              required
-            />
-            <svg class="modal-input-icon" width="18" height="24">
-              <use href="./images/icons.svg#icon-person-black"></use>
-            </svg>
+          <div class="label-field">
+            <label for="user-name" class="modal-label"> Name</label>
+            <div class="modal-field">
+              <input
+                class="modal-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+                required
+              />
+              <svg class="modal-input-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </div>
           </div>
-          <label for="user-phone" class="modal-label"> Phone</label>
+          <div class="label-field">
+            <label for="user-phone" class="modal-label"> Phone</label>
+          </div>
           <div class="modal-field">
             <input
               class="modal-input"
@@ -476,7 +480,9 @@
               <use href="./images/icons.svg#icon-phone-black"></use>
             </svg>
           </div>
-          <label for="user-email" class="modal-label"> E-mail</label>
+          <div class="label-field">
+            <label for="user-email" class="modal-label"> E-mail</label>
+          </div>
           <div class="modal-field">
             <input
               class="modal-input"
@@ -489,44 +495,46 @@
               <use href="./images/icons.svg#icon-email-black"></use>
             </svg>
           </div>
-          <label for="user-comment" class="modal-label"> Comments</label>
+          <div class="label-field">
+            <label for="user-comment" class="modal-label"> Comments</label>
+          </div>
           <div class="modal-field">
             <textarea
               class="modal-comment"
-              type="text"
               name="user-comment"
               rows="5"
               placeholder="Text input"
               id="user-comment"
             ></textarea>
           </div>
-
-          <label class="check-agree">
+          <div class="check-agreement">
             <input
+              id="user-privacy"
               class="visually-hidden"
               type="checkbox"
-              name="agree"
-              value="agree"
+              name="user-privacy"
+              value="true"
             />
-            <span class="modal-check">
-              <svg class="check-box-icon" width="10" height="10">
-                <use href="./images/icons.svg#icon-check-agree"></use>
-              </svg>
-            </span>
-            <span class="check-agree-descr">
-              I accept the terms and conditions of the
-              <a
-                href=""
-                class="check-agree-link"
-                target="_blank"
-                rel="no-referrer nooppener"
-                >Privacy Policy</a
-              >
-            </span>
-          </label>
-          <div class="send-btn">
-            <button type="submit" class="button-hero">Send</button>
+            <label for="user-privacy" class="check-agree">
+              <span class="modal-check">
+                <svg class="check-box-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check-agree"></use>
+                </svg>
+              </span>
+              <span class="check-agree-descr">
+                I accept the terms and conditions of the
+                <a
+                  href=""
+                  class="check-agree-link"
+                  target="_blank"
+                  rel="no-referrer nooppener"
+                  >Privacy Policy</a
+                >
+              </span>
+            </label>
           </div>
+
+          <button type="submit" class="button-hero send-btn">Send</button>
         </form>
       </div>
     </div>
