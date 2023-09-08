@@ -373,7 +373,15 @@ img {
     margin-bottom: 16px;
 }
 
-.label-field {
+.lable-field {
+    margin-bottom: 8px;
+}
+
+.label-field-comm {
+    margin-bottom: 16px;
+}
+
+.modal-label {
     color: var(--lightslate);
     font-size: 12px;
     line-height: 1.17;
