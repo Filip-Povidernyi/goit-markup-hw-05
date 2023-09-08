@@ -328,7 +328,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
     width: 24px;
     height: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -373,12 +372,8 @@ img {
     margin-bottom: 16px;
 }
 
-.lable-field {
+.label-field {
     margin-bottom: 8px;
-}
-
-.label-field-comm {
-    margin-bottom: 16px;
 }
 
 .modal-label {
@@ -395,6 +390,10 @@ img {
 .modal-field {
     position: relative;
     margin-bottom: 8px;
+}
+
+.label-field-comm {
+    margin-bottom: 16px;
 }
 
 .modal-input {
