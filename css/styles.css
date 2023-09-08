@@ -350,7 +350,7 @@ img {
 }
 
 .modal-btn-icon {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-icon:hover,
@@ -363,7 +363,6 @@ img {
     pointer-events: none;
     visibility: hidden;
 }
-
 
 /* MODAL FORM STYLES */
 
@@ -393,9 +392,12 @@ img {
     width: 100%;
     height: 40px;
     padding-left: 38px;
+    padding-right: 38px;
 
     border-radius: 4px;
     border: 1px solid var(--navyblue-modal);
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input-icon {
@@ -403,7 +405,17 @@ img {
     top: 50%;
     left: 0;
     transform: translate(16px, -50%) ;
-    fill: var(--navyblue)
+    fill: var(--navyblue);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.modal-input:focus {
+    border-color: var(--iris);
+}
+
+.modal-input:focus + .modal-input-icon {
+    fill: var(--iris);
 }
 
 .modal-comment {
@@ -414,14 +426,55 @@ img {
     border-radius: 4px;
     border: 1px solid var(--navyblue-modal);
     resize: none;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.check-box-icon:hover {
-    fill: var(--iris);
+.modal-comment::placeholder {
+    color: var(--navyblue-modal);
+}
+
+.modal-comment:focus {
+    border-color: var(--iris);
+}
+
+.modal-check {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+
+    border-radius: 2px;
+    border: 1px solid var(--navyblue-modal);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-box-icon {
+    fill: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="checkbox"]:checked ~ .modal-check {
+    background-color: var(--iris);
+    border-color: transparent;
+}
+
+input[type="checkbox"]:checked + .modal-check > .check-box-icon {
+    fill: var(--cloud);
+}
+
+input[type="checkbox"]:focus-visible ~ .modal-check {
+    outline: 2px solid var(--ocean);
+    outline-offset: 1px;
 }
 
 .check-agree {
     display: flex;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 24px;
 }
 
